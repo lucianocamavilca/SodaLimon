@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos - Soda Limón</title>
+  <link rel="stylesheet" href="productos.css" />
+  <style>
+    /* Estilos para modal de pedido */
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="back-button-container">
+      <a href="index.html" class="back-button">← Volver al Inicio</a>
+    </div>
+    <h1>🥤 Seccion de Bebidas 🥤</h1>
+    <select class="filtro-categoria">
+      <option value="todas">Todas las categorías</option>
+      <option value="clasicas">Clásicas</option>
+      <option value="sin-gas">Sin Gas</option>
+      <option value="light">Light</option>
+    </select>
+  </header>
+
+  <main class="productos-container">
+    <!-- Producto 1: Clásicas -->
+    <div class="producto" data-categoria="clasicas">
+      <img src="https://i5.walmartimages.com.mx/gr/images/product-images/img_large/00750102200958L.jpg" alt="Limonada Clásica" class="producto-img" />
+      <div class="info">
+        <h3>Limonada Clásica</h3>
+        <p>Refrescante mezcla de limón y soda.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 5.00</span>
+      </div>
+    </div>
+    <!-- Producto 2: Con Gas -->
+    <div class="producto" data-categoria="sin-gas">
+      <img src="https://media.falabella.com/tottusPE/40992502_1/w=1500,h=1500,fit=pad" alt="Maracuyá Twist" class="producto-img" />
+      <div class="info">
+        <h3>Maracuyá Twist</h3>
+        <p>Fusión tropical de maracuyá con soda burbujeante.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 6.00</span>
+      </div>
+    </div>
+    <!-- Producto 3: Con Gas -->
+    <div class="producto" data-categoria="sin-gas">
+      <img src="https://www.sodapoponline.com/cdn/shop/products/sprecher_cherry_cola_craft_soda.jpg?v=1571276466" alt="Berry Fizz" class="producto-img" />
+      <div class="info">
+        <h3>Berry Fizz</h3>
+        <p>Soda con mezcla de frutos rojos naturales.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 7.50</span>
+      </div>
+    </div>
+    <!-- Producto 4: Light -->
+    <div class="producto" data-categoria="light">
+      <img src="https://arcordiezb2c.vteximg.com.br/arquivos/ids/186076/Agua-Vip-2000-Cc-1-21308.jpg?v=638684265666870000" alt="Mango Chill" class="producto-img" />
+      <div class="info">
+        <h3>Agua VIP</h3>
+        <p>Exquisita hidratación en su forma más pura..</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 5.00</span>
+      </div>
+    </div>
+    <!-- Producto 5: Clásicas -->
+    <div class="producto" data-categoria="clasicas">
+      <img src="https://media.falabella.com/tottusPE/43323189_1/w=800,h=800,fit=pad" alt="Fresa Sparkle" class="producto-img" />
+      <div class="info">
+        <h3>Kola Tigrina</h3>
+        <p>Sabor dulce y burbujeante con fresas frescas.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 5.00</span>
+      </div>
+    </div>
+    <!-- Producto 6: Light -->
+    <div class="producto" data-categoria="light">
+      <img src="https://www.puntofarma.com.py/imagenes/public/images/Bebida-Aloe-Vera-Original-Good-Energy-532mL-51599.webp" alt="Menta Fresh" class="producto-img" />
+      <div class="info">
+        <h3>Menta Fresh</h3>
+        <p>Bebida de Aloe Vera con un toque de menta para refrescar tu día.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 6.00</span>
+      </div>
+    </div>
+    <!-- Producto 7: Con Gas -->
+    <div class="producto" data-categoria="sin-gas">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT52-wNHYrdQcRfwOaxtNw1fkZFJB0kMrwFtU3yxQTIl8SaDhAuNlsXxQ9nL9LhxwexLoM&usqp=CAU" alt="Piña Cool" class="producto-img" />
+      <div class="info">
+        <h3>Piña Cool</h3>
+        <p>Piña con soda para una sensación tropical y fresca.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 5.00</span>
+      </div>
+    </div>
+    <!-- Producto 8: Light -->
+    <div class="producto" data-categoria="light">
+      <img src="https://plazavea.vteximg.com.br/arquivos/ids/13066654-450-450/20192221.jpg?v=637916544821570000" alt="Sandía Splash" class="producto-img" />
+      <div class="info">
+        <h3>Jugo de Sandía Splash</h3>
+        <p>Una explosión con sandía en soda fría y ligera.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 6.50</span>
+      </div>
+    </div>
+    <!-- Producto 9: Clásicas -->
+    <div class="producto" data-categoria="clasicas">
+      <img src="https://oechsle.vteximg.com.br/arquivos/ids/16580972-1000-1000/image-d5e4f53d3cc543359c44f6906573fe53.jpg?v=638335782019530000" alt="Grape Pop" class="producto-img" />
+      <div class="info">
+        <h3>Red Grape Pop</h3>
+        <p>Energizante espumosa con jugo de camu camu y maca.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 7.00</span>
+      </div>
+    </div>
+    <!-- Producto 10: Con Gas -->
+    <div class="producto" data-categoria="sin-gas">
+      <img src="https://s3.amazonaws.com/mitiendape/uploads/tienda_004111/tienda_004111_4558515b352194051bf1c5ce09859877d816f2e5_producto_small_80.jpeg" alt="Cítricos Mix" class="producto-img" />
+      <div class="info">
+        <h3>Cítricos Mix</h3>
+        <p>Combinación de limones frescos y naranjas para dar sabor.</p>
+        <div class="acciones">
+          <button class="menos">-</button>
+          <span class="cantidad">0</span>
+          <button class="mas">+</button>
+        </div>
+        <span class="precio">S/ 5.00</span>
+      </div>
+    </div>
+  </main>
+
+<footer class="footer">
+    <button class="ver-pedido">
+      🛒 Ver Pedido <span class="total">S/ 0.00</span>
+    </button>
+</footer>
+
+<!-- Modal Pedido -->
+<div class="modal-pedido">
+    <div class="modal-content">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Tu Pedido</h2>
+        <ul class="lista-pedido"></ul>
+        <p class="total-pedido"></p>
+        <div class="botones-modal">
+            <button class="cerrar-modal">Cerrar</button>
+            <button class="pagar-btn">Pagar</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Pago -->
+<div class="modal-pago">
+    <div class="modal-content">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Pagar con Yape</h2>
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=946542845" alt="QR Yape" />
+        <p>Escanea el código QR para pagar con Yape al número: <strong>955441258</strong></p>
+        <p>Después de realizar el pago, vuelve y confirma tu pedido.</p>
+        <button class="cerrar-modal">Cerrar</button>
+    </div>
+</div>
+
+<script src="productos.js"></script>
+<script>
+ 
+//ARREGLAR ESTE PROBLEMA EL POR CUAL EN VEZ
+//DE 1 ME SALTA DEFRENTE AL 2 AL AÑADIR UNA SODA//
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const filtro = document.querySelector(".filtro-categoria");
+        const productos = document.querySelectorAll(".producto");
+
+        filtro.addEventListener("change", () => {
+            const categoriaSeleccionada = filtro.value;
+
+            productos.forEach(producto => {
+                const categoria = producto.getAttribute("data-categoria");
+
+                if (categoriaSeleccionada === "todas" || categoria === categoriaSeleccionada) {
+                    producto.style.display = "flex"; // o "block", según tu CSS
+                } else {
+                    producto.style.display = "none";
+                }
+            });
+        });
+
+        const botonesMas = document.querySelectorAll('.mas');
+        const botonesMenos = document.querySelectorAll('.menos');
+
+        botonesMas.forEach(btn => {
+            let clicking = false;  // Variable para evitar clics rápidos
+            btn.addEventListener('click', () => {
+                if (clicking) return;  // Si ya se ha hecho clic, no hacer nada
+                clicking = true;  // Marcar que el botón ha sido presionado
+                setTimeout(() => clicking = false, 200);  // Restaurar después de 200ms
+
+                const producto = btn.closest('.producto');
+                const cantidadElem = producto.querySelector('.cantidad');
+                let cantidad = parseInt(cantidadElem.textContent);
+                cantidad++;
+                cantidadElem.textContent = cantidad;
+                actualizarTotal();
+            });
+        });
+
+        botonesMenos.forEach(btn => {
+            let clicking = false;  // Variable para evitar clics rápidos
+            btn.addEventListener('click', () => {
+                if (clicking) return;  // Si ya se ha hecho clic, no hacer nada
+                clicking = true;  // Marcar que el botón ha sido presionado
+                setTimeout(() => clicking = false, 200);  // Restaurar después de 200ms
+
+                const producto = btn.closest('.producto');
+                const cantidadElem = producto.querySelector('.cantidad');
+                let cantidad = parseInt(cantidadElem.textContent);
+                if (cantidad > 0) {
+                    cantidad--;
+                    cantidadElem.textContent = cantidad;
+                    actualizarTotal();
+                }
+            });
+        });
+
+        // Actualización del total
+        function actualizarTotal() {
+            let suma = 0;
+            const cantidades = document.querySelectorAll('.cantidad');
+            const total = document.querySelector('.total');
+
+            cantidades.forEach((cant) => {
+                const producto = cant.closest('.producto');
+                const precioTexto = producto.querySelector('.precio').textContent.replace('S/ ', '').trim();
+                const precio = parseFloat(precioTexto);
+                suma += parseInt(cant.textContent) * precio;
+            });
+
+            total.textContent = `S/ ${suma.toFixed(2)}`;
+        }
+
+        // Modal Pedido
+        const botonVerPedido = document.querySelector('.ver-pedido');
+        const modalPedido = document.querySelector('.modal-pedido');
+        const listaPedido = document.querySelector('.lista-pedido');
+        const totalPedido = document.querySelector('.total-pedido');
+        const cerrarModales = document.querySelectorAll('.modal-pedido .cerrar-modal');
+        const pagarBtn = document.querySelector('.pagar-btn');
+
+        botonVerPedido.addEventListener('click', () => {
+            let pedido = [];
+            let suma = 0;
+
+            const cantidades = document.querySelectorAll('.cantidad');
+            cantidades.forEach((cant) => {
+                const cantidad = parseInt(cant.textContent);
+                if (cantidad > 0) {
+                    const producto = cant.closest('.producto');
+                    const nombre = producto.querySelector('h3').textContent;
+                    const precioTexto = producto.querySelector('.precio').textContent.replace('S/ ', '').trim();
+                    const precio = parseFloat(precioTexto);
+                    const subtotal = cantidad * precio;
+
+                    pedido.push({ nombre, cantidad, subtotal });
+                    suma += subtotal;
+                }
+            });
+
+            if (pedido.length === 0) {
+                alert('No has seleccionado ningún producto.');
+                return;
+            }
+
+            listaPedido.innerHTML = '';
+            pedido.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} x${item.cantidad} - S/ ${item.subtotal.toFixed(2)}`;
+                listaPedido.appendChild(li);
+            });
+
+            totalPedido.textContent = `Total: S/ ${suma.toFixed(2)}`;
+            modalPedido.style.display = 'flex';
+        });
+
+        cerrarModales.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalPedido.style.display = 'none';
+                modalPago.style.display = 'none';
+            });
+        });
+
+        // Modal Pago
+        const modalPago = document.querySelector('.modal-pago');
+        const cerrarModalPagoBtns = modalPago.querySelectorAll('.cerrar-modal');
+
+        pagarBtn.addEventListener('click', () => {
+            modalPedido.style.display = 'none';
+
+            // Evitar mostrar el modal de pago más de una vez
+            if (modalPago.style.display !== 'flex') {
+                modalPago.style.display = 'flex';
+            }
+        });
+
+        cerrarModalPagoBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modalPago.style.display = 'none';
+            });
+        });
+    });
+</script>
+</body>
+</html>

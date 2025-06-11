@@ -1,0 +1,248 @@
+/* RESET Y BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #6aeb66;
+  color: #4b5050;
+}
+
+
+
+/* NAVBAR MODERNA */
+.navbar {
+  background: linear-gradient(to right, #d50000, #2979ff);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease, background 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-trabaja {
+  background-color: #f1cf0a;
+  color: #fafafa !important;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.btn-trabaja:hover {
+  background-color: #c78631;
+  color: #bdabab !important;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* BOTÓN - RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: linear-gradient(to right, #d50000, #2e62bd);
+    padding: 1rem 0;
+    display: none;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* BOTÓN VOLVER AL INICIO */
+.back-button-container {
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.back-button {
+  display: inline-block;
+  background: #ec921d;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #444;
+}
+
+/* SECCIÓN DE MARCAS */
+.marcas-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.marcas-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.brand-battle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.brand {
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.brand img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.brand h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.brand p {
+  font-size: 1rem;
+}
+
+
+
+
+
+/* ESTILOS DE COLORES DE MARCAS */
+
+.coca {
+  background: #d50000;
+}
+
+.pepsi {
+  background: #2979ff;
+}
+.cherry {
+  background: #9c27b0; /* Un morado vibrante para representar cereza */
+}
+
+
+
+/* MARCA EXTRA */
+.extra-brand {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: #f5f5f5;
+  border-radius: 12px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.extra-brand img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.extra-brand h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.extra-brand p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* RESPONSIVE - MARCAS */
+@media (max-width: 768px) {
+  .brand-battle {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+

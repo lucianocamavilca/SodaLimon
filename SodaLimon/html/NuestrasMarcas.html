@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nuestras Marcas</title>
+  <link rel="stylesheet" href="marcas.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="https://png.pngtree.com/png-clipart/20221023/original/pngtree-sprite-lemon-soda-png-image_8713874.png" alt="Soda Limón" />
+        <span>Soda Limón</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Inicio</a>
+        <a href="NuestrasMarcas.html">🏷️ Nuestras Marcas</a>
+        <a href="Productos.html">🛒 Productos</a>
+        <a href="Contacto.html">📞 Contáctanos</a>
+        <a href="Trabaja.html" class="btn-trabaja">👨‍💼 Trabaja con Nosotros</a>
+      </nav>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <!-- BOTÓN PARA VOLVER AL INICIO -->
+  <div class="back-button-container">
+    <a href="index.html" class="back-button">← Volver al Inicio</a>
+  </div>
+
+  <section class="marcas-section">
+    <h1>Nuestras Marcas ⚔️</h1>
+
+   
+    <div class="brand-battle">
+      <div class="brand cherry">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREeVGELyEBn2GnyeD2SM2ZwojEBlTv0Y1LRA&s" alt="CocaMarca">
+        <h3>RedSpark Cherry</h3>
+        <p>Dulce, atrevida y vibrante. La chispa con un toque frutal 🍒.</p>
+      </div>
+
+   
+   
+    <div class="brand-battle">
+      <div class="brand coca">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh57iFvdHrsw-4OFIN6r6Gz_Rviyjqx7W7Iw&s" alt="CocaMarca">
+        <h3>RedSpark</h3>
+        <p>Potente, clásico y eterno. Nuestra bebida más emblemática ❤️.</p>
+      </div>
+
+
+      <div class="brand pepsi">
+        <img src="https://cdn.worldvectorlogo.com/logos/fritz.svg" alt="PepsiMarca">
+        <h3>BlueFizz</h3>
+        <p>Rebelde, fresco e intenso. El sabor joven del futuro 💙.</p>
+      </div>
+    </div>
+
+
+    <div class="extra-brand">
+      <img src="https://assets.isu.pub/document-structure/230918210905-96aa7c972a70f1f9890a08e8974fe969/v1/4c4724c861abf498d23c7d6b7be77ae0.jpeg" alt="ExtraMarca">
+      <h3>Limón Soul</h3>
+      <p>Natural, vibrante y refrescante 🍋.</p>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 - Soda Limón 🥤 | Inspirados en las grandes marcas.</p>
+  </footer>
+
+  <!-- JS opcional para menú responsive -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("navLinks");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>

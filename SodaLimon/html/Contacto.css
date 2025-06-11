@@ -1,0 +1,94 @@
+/* trabaja.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #00ff87, #0affef); /* verde lima a celeste */
+  color: #003333;
+}
+
+
+
+header {
+  background-color: #00b894; /* verde menta */
+  color: #fff;
+  padding: 0px;
+  text-align: center;
+  border-bottom: 0px solid #55efc4;
+}
+
+
+/* BOTÓN VOLVER AL INICIO */
+.back-button-container {
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.back-button {
+  display: inline-block;
+  background: #ec921d;
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+  border-radius: 80px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #444;
+}
+
+
+
+
+
+
+
+header h1 {
+  margin: 0;
+}
+
+
+
+section {
+  background-color: #ffffffcc;
+  margin: 40px auto;
+  padding: 35px;
+  max-width: 650px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  border: 2px solid #00cec9;
+  border-radius: 10px;
+  font-size: 1em;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #ff1919;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #e20909;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Soda Limón</title>
+  <link rel="stylesheet" href="trabaja.css"> <!-- Asegúrate de enlazar tu CSS aquí -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+ <!-- ENCABEZADO -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="https://png.pngtree.com/png-clipart/20221023/original/pngtree-sprite-lemon-soda-png-image_8713874.png" alt="Soda Limón" />
+        <span>Soda Limón</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">🏠 Inicio</a>
+        <a href="NuestrasMarcas.html">🏷️ Nuestras Marcas</a>
+        <a href="Productos.html">🛒 Productos</a>
+        <a href="Contacto.html">📞 Contáctanos</a>
+        <a href="Trabaja.html" class="btn-trabaja">👨‍💼 Trabaja con Nosotros</a>
+      </nav>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+<!-- BOTON PARA VOLVER INICIO -->  
+
+<!--<div class="back-button-container">
+    <a href="index.html" class="back-button">← Volver al Inicio</a>/*-->
+    
+    
+
+  <div class="contact-container">
+    <!-- Información de contacto -->
+    <section class="info-cards">
+    <div class="card">
+      <i class="fas fa-map-marker-alt"></i>
+      <h3>NUESTRA OFICINA PRINCIPAL</h3>
+      <p>SoHo 94 Broadway St<br>Nueva York, NY 1001</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-phone-alt"></i>
+      <h3>NÚMERO DE TELÉFONO</h3>
+      <p>995-455-478<br>888-0123-4567 (llamada gratuita)</p>
+        
+    </div>
+    <div class="card">
+      <i class="fas fa-fax"></i>
+      <h3>FAX</h3>
+      <p>1-234-567-8900</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-envelope"></i>
+      <h3>CORREO ELECTRÓNICO</h3>
+      <p><a href="Soda_Limon@hotmail.com">Soda_Limon@hotmail.com</a></p>
+    </div>
+  </section>
+
+
+    <!-- Formulario de contacto -->
+    <div class="form-section">
+      <div class="form-content">
+        <h2>Únete a Soda Limón 🍋</h2>
+        <p class="intro">
+          <strong><em>Podemos garantizar frescura, sabor vibrante, y lo más importante: ¡un ambiente excelente al trabajar con nosotros!</em></strong>
+        </p>
+        
+        <form>
+           <label for="name">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+
+              <label for="email">Celular</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu número  de celular" required>
+
+        
+          <label for="message">Mensaje o CV</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje o dejanos tu CV por aqui" required></textarea>
+
+          <button type="submit">POSTULAR</button>
+        </form>
+
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+<!-- JS PARA MENÚ -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("active");
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
