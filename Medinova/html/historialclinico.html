@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historial Clínico - Medinova</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="historialclinico.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucRY1Vy1Fr_75iZGC7M-hME39Z0oxjA26kw&s" alt="Medinova Logo" class="logo" />
+      <h1>Historial Clínico</h1>
+      <nav>
+        <a href="dashboard.html" class="btn-volver">  ← Volver al Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="patient-info card">
+      <h2><i class="fas fa-user-injured"></i> Datos del Paciente</h2>
+      <div class="info-grid">
+        <p><strong>Nombre:</strong> Luciano Camavilca Cardenas</p>
+        <p><strong>Edad:</strong> 20 años</p>
+        <p><strong>DNI:</strong> 2333278</p>
+        <p><strong>Sexo:</strong> Masculino</p>
+        <p><strong>Grupo Sanguíneo:</strong> O+</p>
+        <p><strong>Teléfono:</strong> 987654321</p>
+        <p><strong>Email:</strong> Luciano@hotmail.com</p>
+        <p><strong>Dirección:</strong> Av. Central 123, Ica</p>
+      </div>
+    </section>
+
+    <section class="antecedentes card">
+      <div class="card-header">
+        <h2><i class="fas fa-notes-medical"></i> Antecedentes Médicos</h2>
+       
+      </div>
+      <ul>
+        <li>Asma diagnosticada en infancia</li>
+        <li>Intervención quirúrgica: Apendicitis (2019)</li>
+        <li>Alergia a la penicilina</li>
+        <li>Historial familiar de hipertensión</li>
+      </ul>
+
+      <!-- Agregar nuevo antecedente -->
+      <div class="form-controls">
+        <input type="text" id="nuevo-antecedente" placeholder="Nuevo antecedente..." />
+        <button onclick="agregarAntecedente()">➕ Agregar</button>
+      </div>
+    </section>
+
+    <section class="clinical-records card">
+      <h2><i class="fas fa-notes-medical"></i> Historial Médico</h2>
+
+      <!-- 🔍 Buscador de registros -->
+      <input type="text" id="buscador" placeholder="Buscar diagnóstico o fecha..." class="buscador" />
+
+
+
+       <!-- Formulario para nueva consulta -->
+  <h3>Agregar nueva consulta</h3>
+  <form id="formularioConsulta">
+    <label for="motivo">Motivo de la consulta:</label>
+    <input type="text" id="motivo" required />
+
+    <label for="diagnostico">Diagnóstico:</label>
+    <input type="text" id="diagnostico" required />
+
+    <label for="tratamiento">Tratamiento:</label>
+    <input type="text" id="tratamiento" required />
+
+    <label for="notas">Notas:</label>
+    <textarea id="notas" required></textarea>
+
+    <label for="medico">Médico tratante:</label>
+    <input type="text" id="medico" required />
+
+    <label for="fecha">Fecha de consulta:</label>
+    <input type="date" id="fecha" required />
+<button type="submit">Agregar Consulta</button>
+  </form>
+
+  <!-- Resto de los registros -->
+  <div id="registros">
+
+
+
+
+      <!-- Resto de los registros -->
+      <div class="record">
+        <h3>Consulta - 10/05/2025</h3>
+        <p><strong>Motivo:</strong> Tos persistente y fiebre leve</p>
+        <p><strong>Diagnóstico:</strong> Cuadro de bronquitis</p>
+        <p><strong>Tratamiento:</strong> Amoxicilina 500mg c/8h por 7 días</p>
+        <p><strong>Notas:</strong> Reposo en casa, buena hidratación, seguimiento programado para el 17/03/2025</p>
+        <p><strong>Médico tratante:</strong> Dr. José Cárdenas</p>
+      </div>
+
+      <div class="record">
+        <h3>Consulta - 02/02/2025</h3>
+        <p><strong>Motivo:</strong> Estornudos frecuentes, picazón nasal</p>
+        <p><strong>Diagnóstico:</strong> Alergia estacional</p>
+        <p><strong>Tratamiento:</strong> Loratadina 10mg diarios</p>
+        <p><strong>Notas:</strong> Revisión mensual recomendada en temporada alta de polen</p>
+        <p><strong>Médico tratante:</strong> Dra. Ana Valdez</p>
+      </div>
+
+      <div class="record">
+        <h3>Consulta - 12/12/2024</h3>
+        <p><strong>Motivo:</strong> Dolor abdominal bajo</p>
+        <p><strong>Diagnóstico:</strong> Gastroenteritis leve</p>
+        <p><strong>Tratamiento:</strong> Suero oral, dieta blanda, analgésico suave</p>
+        <p><strong>Notas:</strong> Instrucciones dietéticas entregadas. Sin signos de alarma.</p>
+        <p><strong>Médico tratante:</strong> Dr. Ricardo Vásquez</p>
+      </div>
+    </section>
+
+    <section class="exam-results">
+      <h2><i class="fas fa-x-ray"></i> Resultados de Exámenes</h2>
+      <table class="exam-table">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Tipo de Examen</th>
+            <th>Resultado</th>
+            <th>Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Fecha">11/05/2025</td>
+            <td data-label="Tipo de Examen">Radiografía de Tórax</td>
+            <td data-label="Resultado">Bronquios inflamados</td>
+            <td data-label="Observaciones">Requiere tratamiento antibiótico</td>
+          </tr>
+          <tr>
+            <td data-label="Fecha">03/02/2025</td>
+            <td data-label="Tipo de Examen">Prueba de Alergia</td>
+            <td data-label="Resultado">Positiva a ácaros y polen</td>
+            <td data-label="Observaciones">Indicación de antihistamínicos</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="general-notes">
+      <h2><i class="fas fa-stethoscope"></i> Notas Médicas Generales</h2>
+      <div class="note-box">
+        <p><strong>Estado del Paciente:</strong> Evolución estable.</p>
+        <p><strong>Recomendaciones:</strong></p>
+        <ul>
+          <li>Evitar exposición al polvo y cambios bruscos de clima.</li>
+          <li>Alimentación balanceada con reducción de grasas.</li>
+          <li>Control cada 3 meses o ante nuevos síntomas.</li>
+        </ul>
+      </div>
+   
+
+    </section>
+  </main>
+
+  <div class="pdf-export">
+    <button onclick="window.print()"><i class="fas fa-file-pdf"></i> Descargar Historial PDF</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Medinova - Clínica Integral</p>
+      <p>Visitas al historial: <span id="visit-counter">0</span></p>
+    </div>
+  </footer>
+
+  <script src="historialclinico.js"></script>
+
+  <script>
+    // Contador de visitas simple con localStorage
+    const counter = localStorage.getItem("visitas") || 0;
+    const updated = parseInt(counter) + 1;
+    localStorage.setItem("visitas", updated);
+    document.getElementById("visit-counter").innerText = updated;
+  </script>
+</body>
+
+</html>

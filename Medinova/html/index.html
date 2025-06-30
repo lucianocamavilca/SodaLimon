@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medinova - Inicio de Sesión</title>
+  <link rel="stylesheet" href="index.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #14c0b7d2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+
+      /* Animación para que flote */
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+      50% {
+        transform: translateY(-15px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+      }
+    }
+
+    .login-container img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #4da314;
+      border-radius: 5px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e70f0f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .login-container a {
+      display: block;
+      margin-top: 10px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .password-container {
+      position: relative;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="https://previews.123rf.com/images/jemastock/jemastock1611/jemastock161103689/68995745-doctor-icono-de-dibujos-animados-tema-m%C3%A9dico-y-de-cuidado-de-la-salud-dise%C3%B1o-aislado-ilustraci%C3%B3n-vec.jpg" alt="medico">
+    <form onsubmit="redirectToDashboard(event)">
+      <input type="email" placeholder="Correo" required />
+      <div class="password-container">
+        <input type="password" id="password" placeholder="Contraseña" required />
+        <span class="toggle-password" onclick="togglePassword()">👁️‍🗨️</span>
+      </div>
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <a href="#">Regístrarse</a>
+  </div>
+
+  <!-- Link a archivo JS externo -->
+  <script src="script.js"></script>
+</body>
+</html>

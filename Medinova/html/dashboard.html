@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Medinova</title>
+  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQucRY1Vy1Fr_75iZGC7M-hME39Z0oxjA26kw&s" />
+  <!-- Agregar Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+  <!-- Modo Oscuro y Navegación -->
+  <header>
+    <button id="toggle-dark-mode" aria-label="Activar Modo Oscuro">🌙 Modo Oscuro</button>
+    <a href="index.html" class="back-button" aria-label="Volver al inicio">← Volver al Inicio</a>
+
+    <!-- Barra de Navegación -->
+    <nav class="navbar">
+      <button class="menu-toggle" aria-label="Abrir menú">☰ Menú</button>
+      <ul class="tabs">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="citas.html">Citas</a></li>
+        <li><a href="historialclinico.html">H. clínico</a></li>
+        <li><a href="facturacion.html">Facturación</a></li>
+        <li><a href="tratamiento.html">Tratamiento</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Campanita de Notificaciones -->
+  <div class="notificaciones-barra">
+    <button id="notificaciones-btn" class="icono-campana" aria-label="Ver notificaciones">
+      🔔
+      <span id="contador-notificaciones" class="oculto">0</span>
+    </button>
+
+    <div id="panel-notificaciones" class="panel oculto">
+      <h4>Notificaciones</h4>
+      <ul id="lista-notificaciones">
+        <!-- Notificaciones se agregarán aquí dinámicamente -->
+      </ul>
+      <button id="cerrar-notificaciones" aria-label="Cerrar notificaciones">✖️</button>
+    </div>
+  </div>
+
+
+  <!-- Contenido Principal -->
+  <main class="dashboard-grid">
+    <!-- Tarjetas -->
+    <section class="card flotante">
+      <h3>Citas <span class="subhead">Día, semana, mes</span></h3>
+      <ul>
+        <li>Consulta por fiebre 🌡️ <span class="estado urgente" title="Necesita atención inmediata">urgente</span></li>
+        <li>Dolor de garganta 🤒 <span class="estado completado" title="Tratamiento completado">completado</span></li>
+        <li>Asma, alergias 🌿 <span class="estado pendiente"  title="Tratamiento en proceso">pendiente</span></li>
+        <li>Otros</li>
+      </ul>
+    </section>
+
+    <section class="card flotante" id="historial-clinico">
+      <h3>Historial Clínico <span class="subhead">Últimas visitas y antecedentes</span></h3>
+      <ul>
+      <li>Última consulta: 12 de junio de 2025 ✔️</li>
+       <li>Diagnóstico previo: Hipertensión ✔️</li>
+      <li>Recomendación: Hacer ejercicio 3 veces a la semana ✔️</li>
+      </ul>
+    </section>
+
+    <section class="card flotante">
+      <h3>Tratamiento <span class="subhead">Diarias</span></h3>
+      <ul>
+     <li>Medicación diaria: 10 mg Losartán ✔️</li>
+     <li>Terapia de control de estrés ✔️</li>
+     <li>Próxima consulta: 19 de julio de 2025 ✔️</li>
+     <li>Instrucción especial: Evitar exceso de sal ✔️</li>
+      </ul>
+
+    </section>
+
+    <section class="card flotante">
+      <h3>Pagos <span class="subhead">Subhead</span></h3>
+      <ul>
+  <li>Último pago realizado: $50 (12 de junio de 2025) ✔️</li>
+  <li>Factura pendiente: $75 (Vencimiento: 30 de junio de 2025) ✔️</li>
+  <li>Pago realizado con tarjeta de crédito ✔️</li>      
+      </ul>
+    </section>
+
+    <section class="card wide flotante">
+      <h3>Notificaciones <span class="subhead">Subhead</span></h3>
+      <ul>
+    <li>Recordatorio: Cita el 19 de julio de 2025 ✔️</li>
+     <li>Notificación: Cambio en el horario de atención ✔️</li>
+  <li>Mensaje recibido: El doctor ha actualizado el tratamiento ✔️</li>
+  <li>Recordatorio: Renueva medicamentos antes del 1 de agosto ✔️</li>
+  <li>Notificación: ¡Tu examen de sangre está listo! ✔️</li>
+</ul>
+      
+    </section>
+
+    <section class="card wide flotante">
+      <h3>Estadísticas de Citas <span class="subhead">Últimos 7 días</span></h3>
+      <canvas id="citasChart" width="400" height="200"></canvas>
+    </section>
+
+  </main>
+<footer class="footer">
+  <p>&copy; 2025 MediNova | Todos los derechos reservados.</p>
+  <div class="social-icons">
+     <a href="https://www.facebook.com" target="_blank" aria-label="Facebook" class="facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+     <a href="https://www.instagram.com" target="_blank" aria-label="Instagram" class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+      <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Modo oscuro
+      const darkModeBtn = document.getElementById('toggle-dark-mode');
+      const body = document.body;
+      if (localStorage.getItem('modoOscuro') === 'true') {
+        body.classList.add('dark-mode');
+      }
+
+      darkModeBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('modoOscuro', body.classList.contains('dark-mode'));
+      });
+
+      // Gráfico de citas
+      const ctx = document.getElementById('citasChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb', 'Dom'],
+          datasets: [{
+            label: 'Número de Citas',
+            data: [5, 3, 4, 6, 2, 1, 0],
+            backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b', '#858796', '#5a5651'],
+            borderColor: '#fff',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: { beginAtZero: true, ticks: { stepSize: 1 } }
+          }
+        }
+      });
+
+      // Menú móvil
+      const toggleButton = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".tabs");
+      toggleButton.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+
+      // Campana y panel de notificaciones
+      const btnNotificaciones = document.getElementById('notificaciones-btn');
+      const panel = document.getElementById('panel-notificaciones');
+      const lista = document.getElementById('lista-notificaciones');
+      const contador = document.getElementById('contador-notificaciones');
+      const cerrarNotificaciones = document.getElementById('cerrar-notificaciones');
+      let totalNotificaciones = 0;
+
+      // Función para agregar notificaciones dinámicamente
+      function agregarNotificacion(mensaje) {
+        const nueva = document.createElement('li');
+        nueva.textContent = mensaje;
+
+        lista.prepend(nueva);
+        totalNotificaciones++;
+        actualizarContador();
+      }
+
+      // Actualizar contador
+      function actualizarContador() {
+        if (totalNotificaciones > 0) {
+          contador.textContent = totalNotificaciones;
+          contador.classList.remove('oculto');
+          contador.classList.add('animado');
+          setTimeout(() => contador.classList.remove('animado'), 300);  // Quitar la animación después de 300ms
+        } else {
+          contador.classList.add('oculto');
+          contador.textContent = '0';
+        }
+      }
+
+      // Mostrar y ocultar el panel de notificaciones
+      btnNotificaciones.addEventListener('click', () => {
+        panel.classList.toggle('oculto');
+        if (!panel.classList.contains('oculto')) {
+          totalNotificaciones = 0;
+          actualizarContador();
+        }
+      });
+
+      // Cerrar las notificaciones
+      cerrarNotificaciones.addEventListener('click', () => {
+        panel.classList.add('oculto');
+      });
+
+      // Agregar una nueva notificación cada 10 segundos
+      setInterval(() => {
+        agregarNotificacion('🆕 Nueva notificación pendiente.');
+      }, 50000); // Añadir una notificación cada 10 segundos
+
+      // Simular una notificación inicial
+      agregarNotificacion('💡 Tienes una cita pendiente.');
+    });
+
+</script>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

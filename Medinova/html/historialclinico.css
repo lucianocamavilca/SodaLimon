@@ -1,0 +1,389 @@
+/* === Reset general === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 150px; /* Ajusta el tamaño según lo necesites */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eaf4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/*Color para el boton volver*/
+.btn-volver {
+  text-decoration: none;
+  background-color: #dd1742;  /* Rojo de ambulancia */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.btn-volver:hover {
+  background-color: #f59c18;  /* Rojo más oscuro */
+}
+
+
+
+
+
+
+
+/* === Encabezado === */
+.header {
+  background-color: #0066cc;
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header nav a {
+  color: #f8f7f3;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Antecedentes (Card) === */
+.antecedentes.card {
+  background-color: #fefefe;
+  border: 2px solid #3f51b5;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.antecedentes.card:hover {
+  transform: scale(1.02);
+}
+
+.antecedentes.card h2 {
+  font-size: 1.6rem;
+  color: #3f51b5;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3f51b5;
+  padding-bottom: 0.5rem;
+}
+
+.antecedentes.card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.antecedentes.card ul li {
+  background-color: #e8eaf6;
+  border-left: 5px solid #3f51b5;
+  margin-bottom: 0.8rem;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+/* Estilo del botón */
+form button {
+  padding: 9px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Espaciado entre el formulario y los registros */
+#registros {
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* === Controles de formulario === */
+.form-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f0f8ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form-controls input[type="text"] {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #b0c4de;
+  border-radius: 6px;
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.form-controls button {
+  padding: 10px 16px;
+  background-color: #ff9d09;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-controls button:hover {
+  background-color: #c44b13;
+}
+
+/* === Listado de antecedentes === */
+#antecedentes-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+#antecedentes-list li button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+#antecedentes-list li button:hover {
+  background-color: #c62828;
+}
+
+/* === Buscador === */
+.buscador {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 10px 0 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* === Resultados de Exámenes === */
+.exam-results {
+  margin-top: 2rem;
+}
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #f5faff;
+  border: 2px solid #b3d4fc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 102, 204, 0.1);
+}
+
+.exam-table th {
+  background-color: #0099cc;
+  color: white;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.exam-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.exam-table tr:hover {
+  background-color: #e1f5fe;
+}
+
+/* === Notas Médicas Generales === */
+.general-notes {
+  margin-top: 2.5rem;
+}
+
+.note-box {
+  background-color: #fff0e6;
+  border-left: 6px solid #ff9800;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.1);
+}
+
+.note-box ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.note-box li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* === Contenedor principal === */
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 102, 204, 0.1);
+}
+
+.container h2 {
+  font-size: 1.8rem;
+  color: #004080;
+  margin-bottom: 1rem;
+  border-left: 5px solid #0099ff;
+  padding-left: 0.5rem;
+}
+
+.container h3 {
+  color: #0066cc;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+}
+
+/* === Información del paciente === */
+.patient-info {
+  background-color: #f0faff;
+  border: 2px solid #b3e5fc;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.patient-info .info p {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+/* === Historial Médico === */
+.clinical-records .record {
+  background-color: #fff3e0;
+  border-left: 5px solid #ffa726;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.clinical-records .record:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(255, 167, 38, 0.2);
+}
+
+.clinical-records .record p {
+  margin: 0.4rem 0;
+}
+
+/* === Footer === */
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #004080;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* === Exportar PDF === */
+.pdf-export {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.pdf-export button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-export button i {
+  margin-right: 0.5rem;
+}
+
+.pdf-export button:hover {
+  background-color: #b71c1c;
+}
+
+/* === Estilo de impresión === */
+@media print {
+         
+  body{ 
+    color: #000;
+   background: rgb(255, 247, 247);  /* Aquí se corrige el error, especificando un color de fondo */
+    font-size: 12pt;
+  }
+  
+  header, footer, .pdf-export {
+    display: none;
+  }
+  
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Medinova | Citas</title>
+  <link rel="stylesheet" href="citas.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Para las notificaciones de confirmación -->
+</head>
+<body>
+  <header class="header">
+    <h1>📅 Citas Médicas</h1>
+    <a href="dashboard.html" class="btn-volver"> ← Volver al Dashboard</a>
+  </header>
+
+  <main class="container">
+    <!-- Formulario de Agendar Cita -->
+    <section class="form-section">
+      <h2>Agendar Nueva Cita</h2>
+      <form class="appointment-form" id="appointment-form">
+        <div class="form-group">
+          <label for="paciente">👤 Nombre del Paciente</label>
+          <input type="text" id="paciente" placeholder="Ej: Juan Pérez" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha">📅 Fecha</label>
+          <input type="date" id="fecha" required>
+        </div>
+
+        <div class="form-group">
+          <label for="hora">🕒 Hora</label>
+          <input type="time" id="hora" required>
+        </div>
+
+        <div class="form-group">
+          <label for="especialidad">🩺 Especialidad</label>
+          <select id="especialidad" required>
+            <option value="">Seleccionar</option>
+            <option value="medicina">Medicina General</option>
+            <option value="pediatria">Pediatría</option>
+            <option value="odontologia">Odontología</option>
+            <option value="ginecologia">Ginecología</option>
+          </select>
+        </div>
+
+        <button type="submit">✅ Agendar Cita</button>
+      </form>
+    </section>
+
+    <!-- Sección de Citas Programadas -->
+    <section class="list-section">
+      <h2>📋 Citas Programadas</h2>
+      <input type="text" id="search" placeholder="Buscar por paciente o especialidad" class="search-input">
+      <ul id="appointment-list" class="appointment-list">
+        <!-- Las citas se agregarán aquí dinámicamente -->
+      </ul>
+    </section>
+  </main>
+
+  <!-- Modal para Confirmar Cancelación de Cita -->
+  <div id="modal-cancel" class="modal">
+    <div class="modal-content">
+      <p>¿Estás seguro de que quieres cancelar esta cita?</p>
+      <button id="confirm-cancel" class="btn-confirm-cancel">Confirmar</button>
+      <button id="cancel-cancel" class="btn-cancel">Cancelar</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("appointment-form");
+      const searchInput = document.getElementById("search");
+      const appointmentList = document.getElementById("appointment-list");
+      const modalCancel = document.getElementById("modal-cancel");
+      let currentAppointmentToCancel = null;
+
+      // Agregar cita al listado
+      function addAppointment(paciente, fecha, hora, especialidad) {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          <p><strong>${paciente}</strong><br>📅 ${fecha} – 🕒 ${hora} – 🩺 ${especialidad}</p>
+          <button class="btn-cancelar">Cancelar</button>
+        `;
+        appointmentList.appendChild(li);
+
+        const cancelButton = li.querySelector(".btn-cancelar");
+        cancelButton.addEventListener("click", () => {
+          currentAppointmentToCancel = li;
+          modalCancel.style.display = "block";
+        });
+      }
+
+      // Manejar la cancelación
+      document.getElementById("confirm-cancel").addEventListener("click", () => {
+        if (currentAppointmentToCancel) {
+          currentAppointmentToCancel.remove();
+          modalCancel.style.display = "none";
+          Swal.fire({
+            title: '¡Cita Cancelada!',
+            text: 'La cita ha sido cancelada correctamente.',
+            icon: 'success'
+          });
+        }
+      });
+
+      document.getElementById("cancel-cancel").addEventListener("click", () => {
+        modalCancel.style.display = "none";
+      });
+
+      // Función para buscar citas
+      searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+        const citas = appointmentList.getElementsByTagName("li");
+        Array.from(citas).forEach(cita => {
+          const text = cita.textContent.toLowerCase();
+          if (text.includes(query)) {
+            cita.style.display = "";
+          } else {
+            cita.style.display = "none";
+          }
+        });
+      });
+
+      // Validación del formulario y agregar la cita
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const paciente = document.getElementById("paciente").value;
+        const fecha = document.getElementById("fecha").value;
+        const hora = document.getElementById("hora").value;
+        const especialidad = document.getElementById("especialidad").value;
+
+        if (paciente && fecha && hora && especialidad) {
+          addAppointment(paciente, fecha, hora, especialidad);
+
+          // Mostrar notificación de éxito
+          Swal.fire({
+            title: '¡Cita Agendada!',
+            text: `La cita para ${paciente} ha sido agendada correctamente.`,
+            icon: 'success'
+          });
+
+          // Limpiar el formulario
+          form.reset();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

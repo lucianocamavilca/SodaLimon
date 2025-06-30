@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil del Paciente</title>
+  <link rel="stylesheet" href="perfil.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-info">
+        <img src="https://static.vecteezy.com/system/resources/previews/051/270/245/non_2x/cartoon-people-avatar-minimalist-human-avatar-versatile-icon-for-online-projects-an-avatar-for-the-profile-picture-of-someone-vector.jpg" alt="Foto de Perfil" class="profile-img"/>
+        <h3 id="username">Juan Pérez</h3>
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="#informacion">Información Personal</a></li>
+        <li><a href="#historial">Historial Médico</a></li>
+        <li><a href="#citas">Citas</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="dashboard-btn-container">
+        <button class="btn-back" onclick="volverAlDashboard()">Volver al Dashboard</button>
+      </div>
+
+      <!-- Información Personal -->
+      <section id="informacion" class="section-box">
+        <h2>Información Personal</h2>
+        <div class="info-item">
+          <span>Edad:</span>
+          <p id="edad">30 años</p>
+        </div>
+        <div class="info-item">
+          <span>Correo:</span>
+          <p id="correo">juan.perez@mail.com</p>
+        </div>
+        <div class="info-item">
+          <span>Teléfono:</span>
+          <p id="telefono">+1 234 567 890</p>
+        </div>
+        <button class="btn" id="editarBtn">Editar Información</button>
+      </section>
+
+      <!-- Historial Médico -->
+      <section id="historial" class="section-box">
+        <h2>Historial Médico</h2>
+        <ul class="historial-list" id="historial-medico">
+          <!-- Aquí se cargarán dinámicamente las consultas -->
+        </ul>
+      </section>
+
+      <!-- Citas Programadas -->
+      <section id="citas" class="section-box">
+        <h2>Citas Programadas</h2>
+        <div class="cita" id="cita1">
+          <p>15 de Julio, 2023 - Consulta de seguimiento</p>
+          <button class="btn" onclick="cancelarCita('cita1')">Cancelar Cita</button>
+        </div>
+        <div class="cita" id="cita2">
+          <p>20 de Julio, 2023 - Examen de laboratorio</p>
+          <button class="btn" onclick="cancelarCita('cita2')">Cancelar Cita</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

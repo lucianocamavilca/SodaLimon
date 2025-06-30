@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Facturación - Medinova</title>
+  <link rel="stylesheet" href="facturacion.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>Facturación</h1>
+      <nav>
+        <a href="dashboard.html">← Volver al Dashboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- RESUMEN -->
+    <section class="summary-cards">
+      <div class="card total">
+        <h3>Total Facturado</h3>
+        <p>S/ <span id="total-facturado">0.00</span></p>
+      </div>
+      <div class="card pagado">
+        <h3>Total Pagado</h3>
+        <p>S/ <span id="total-pagado">0.00</span></p>
+      </div>
+      <div class="card pendiente">
+        <h3>Pendiente</h3>
+        <p>S/ <span id="total-pendiente">0.00</span></p>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="form-section">
+      <h2>Registrar Nueva Factura</h2>
+      <form id="form-factura" class="factura-form">
+        <input type="date" id="fecha" required />
+        <input type="text" id="paciente" placeholder="Nombre del paciente" required />
+        <input type="number" id="monto" placeholder="Monto (S/)" required />
+        <select id="estado" required>
+          <option value="">Estado</option>
+          <option value="pagado">Pagado</option>
+          <option value="pendiente">Pendiente</option>
+          <option value="en-proceso">En proceso</option>
+        </select>
+        <div class="btn-group">
+          <button type="submit" class="btn green">➕ Añadir Factura</button>
+          <button type="button" class="btn gray" onclick="limpiarFormulario()">🧹 Limpiar</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- TABLA DE FACTURAS -->
+    <section class="table-section">
+      <div class="table-header">
+        <h2>Facturas Recientes</h2>
+        <input type="text" id="filtro" placeholder="Buscar por nombre o estado..." />
+      </div>
+      <table class="tabla-facturas">
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Paciente</th>
+            <th>Monto</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="facturas-body"></tbody>
+        <tbody>
+          <!-- Aquí se cargan dinámicamente las filas -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- GRÁFICO -->
+    <section class="grafico-container">
+      <h2>Gráfico de Ingresos</h2>
+      <div class="chart-wrapper">
+        <canvas id="graficoFacturacion"></canvas>
+      </div>
+    </section>
+
+    <!-- EXPORTAR -->
+    <section class="exportar">
+      <button onclick="window.print()">📄 Exportar a PDF</button>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Medinova</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast">✅ Factura registrada correctamente</div>
+
+  <script src="facturacion.js"></script>
+</body>
+</html>

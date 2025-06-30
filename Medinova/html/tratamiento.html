@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tratamiento - Medinova</title>
+  <link rel="stylesheet" href="tratamiento.css" />
+  <script defer src="tratamiento.js"></script>
+</head>
+<body>
+  <header class="header">
+    <h1>🩺 Plan de Tratamiento - Medinova</h1>
+    <nav>
+      <a href="dashboard.html">← Volver al Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Datos del paciente -->
+    <section class="patient-summary">
+      <h2>👤 Datos del Paciente</h2>
+      <div class="summary-box">
+        <p><strong>Nombre:</strong> Juan Pérez</p>
+        <p><strong>Edad:</strong> 35 años</p>
+        <p><strong>Diagnóstico:</strong> Faringitis aguda</p>
+        <p><strong>Estado:</strong>
+          <span class="status-label en-progreso">🟡 En curso</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Tratamientos activos -->
+    <section class="treatment-plan">
+      <h2>💊 Tratamientos Activos</h2>
+      <button class="toggle-button" onclick="toggleTratamientos()">Mostrar / Ocultar Tratamientos</button>
+
+      <div id="tratamientos-activos" class="treatments-container">
+        <!-- Tratamientos agregados dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Recomendaciones del médico -->
+    <section class="doctor-notes">
+      <h2>📋 Recomendaciones del Médico</h2>
+      <div class="summary-box doctor">
+        <p>Evitar el consumo de alimentos fríos durante el tratamiento.</p>
+        <p>Tomar abundante líquido y mantenerse en reposo.</p>
+      </div>
+    </section>
+
+    <!-- Acciones interactivas -->
+    <section class="acciones">
+      <input type="text" id="nuevoNombre" placeholder="Nombre del tratamiento" />
+      <input type="text" id="nuevaDescripcion" placeholder="Descripción del tratamiento" />
+      <button id="btnAgregar">➕ Añadir nuevo tratamiento</button>
+      <button id="btnAlta">✔️ Dar de alta al paciente</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Medinova. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="toast-container"></div>
+</body>
+</html>
